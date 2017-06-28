@@ -1,0 +1,135 @@
+<!doctype html>
+<html><!-- InstanceBegin template="Macintosh HD:Users:qianjinghua:Desktop:海贼王:Templates:Untitled-1.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="UTF-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>ÎÞ±êÌâÎÄµµ</title>
+<style type="text/css">
+body {
+	background-image: url(images/%E6%9C%AA%E6%A0%87%E9%A2%98-1.jpg);
+}
+</style>
+<!-- InstanceEndEditable -->
+<link href="index.css" rel="stylesheet" type="text/css">
+<style type="text/css" media="all">
+body{
+	background: white;
+	background-image: url(images/%E6%9C%AA%E6%A0%87%E9%A2%98-1.jpg);
+}
+.d1{width:550px;height:auto;overflow:hidden;border:#666666 2px solid;background-color:#000000;position:relative;}
+.loading{width:550px;border:#666666 2px solid;background-color:#000000;color:#FFCC00;font-size:12px;height:179px;text-align:center;padding-top:30px;font-family:Verdana, Arial, Helvetica, sans-serif;font-weight:bold;}
+.d2{width:100%;height:280px;overflow:hidden;}
+.num_list{position:absolute;width:100%;left:0px;bottom:-1px;background-color:#000000;color:#FFFFFF;font-size:12px;padding:4px 0px;height:20px;overflow:hidden;}
+.num_list span{display:inline-block;height:16px;padding-left:6px;}
+img{border:0px;}
+.d3{display: none}
+.button{position:absolute; z-index:1000; right:0px; bottom:2px; font-size:13px; font-weight:bold; font-family:Arial, Helvetica, sans-serif;}
+.b1,.b2{background-color:#666666;display:block;float:left;padding:2px 6px;margin-right:3px;color:#FFFFFF;text-decoration:none;cursor:pointer;}
+.b2{color:#FFCC33;background-color:#FF6633;}
+body div {
+	width: 1280px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+#content #rightmain #fade_focus {
+	float: left;
+	width: 550px;
+}
+</style>
+<script language="javascript" type="text/javascript">
+//主函数
+var s=function(){
+var interv=2000; //切换时间
+var interv2=10; //切换速速
+var opac1=80; //文字背景的透明度
+var source="fade_focus" //图片容器的id名称
+//获取对象
+function getTag(tag,obj){if(obj==null){return document.getElementsByTagName(tag)}else{return obj.getElementsByTagName(tag)}}
+function getid(id){return document.getElementById(id)};
+var opac=0,j=0,t=63,num,scton=0,timer,timer2,timer3;var id=getid(source);id.removeChild(getTag("div",id)[0]);var li=getTag("li",id);var div=document.createElement("div");var title=document.createElement("div");var span=document.createElement("span");var button=document.createElement("div");button.className="button";for(var i=0;i<li.length;i++){var a=document.createElement("a");a.innerHTML=i+1;a.onclick=function(){clearTimeout(timer);clearTimeout(timer2);clearTimeout(timer3);j=parseInt(this.innerHTML)-1;scton=0;t=63;opac=0;fadeon();};a.className="b1";a.onmouseover=function(){this.className="b2"};a.onmouseout=function(){this.className="b1";sc(j)};button.appendChild(a);}
+//控制图层透明度
+function alpha(obj,n){if(document.all){obj.style.filter="alpha(opacity="+n+")";}else{obj.style.opacity=(n/100);}}
+//控制焦点按钮
+function sc(n){for(var i=0;i<li.length;i++){button.childNodes[i].className="b1"};button.childNodes[n].className="b2";}
+title.className="num_list";title.appendChild(span);alpha(title,opac1);id.className="d1";div.className="d2";id.appendChild(div);id.appendChild(title);id.appendChild(button);
+//渐显
+var fadeon=function(){opac+=5;div.innerHTML=li[j].innerHTML;span.innerHTML=getTag("img",li[j])[0].alt;alpha(div,opac);if(scton==0){sc(j);num=-2;scrolltxt();scton=1};if(opac<100){timer=setTimeout(fadeon,interv2)}else{timer2=setTimeout(fadeout,interv);};}
+//渐隐
+var fadeout=function(){opac-=5;div.innerHTML=li[j].innerHTML;alpha(div,opac);if(scton==0){num=2;scrolltxt();scton=1};if(opac>0){timer=setTimeout(fadeout,interv2)}else{if(j<li.length-1){j++}else{j=0};fadeon()};}
+//滚动文字
+var scrolltxt=function(){t+=num;span.style.marginTop=t+"px";if(num<0&&t>3){timer3=setTimeout(scrolltxt,interv2)}else if(num>0&&t<62){timer3=setTimeout(scrolltxt,interv2)}else{scton=0}};
+fadeon();
+}
+//初始化
+window.onload=s;
+</script>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<div>
+  <p>&nbsp;</p>
+  <p>
+    <header><img src="images/header1.jpg" width="1280" height="230" alt=""/><img src="images/header2.gif" width="580" height="200" alt=""/></header>
+  </p>
+</div>
+<div id="nav">
+  <ul>
+    <li><a href="index.html">网站首页</a></li>
+    <li><a href="主角人物.html">主角人物</a></li>
+    <li><a href="人气配角.html">人气配角</a></li>
+    <li><a href="精美壁纸.html">精美壁纸</a></li>
+    <li><a href="精彩视频.html">精彩视频</a></li>
+    <li><a href="主题歌曲.html">主题歌曲</a></li>
+  </ul>
+  <p>&nbsp;</p>
+</div>
+
+<!-- InstanceBeginEditable name="dotcontent" -->
+<nav>
+  <div class="rowpeijue">
+    <div class="picpeijue"><img src="images/peijue1.jpg" width="200" height="200" alt=""/></div>
+    <p>中文名：波特卡斯·D·艾斯</p>
+    <p>日文名：ポートガス·D·エース </p>
+    <p>简介：主角蒙奇·D·路飞的义兄。本名哥尔·D·艾斯，实为&ldquo;海贼王&rdquo;哥尔·D·罗杰的遗腹子，长大后因相当痛恨父亲，故改姓生母波特卡斯·D·露玖的姓氏。后因为保护路飞用身体去挡海军大将赤犬的岩浆拳，结果被贯穿了身体。内脏也被烧伤，船医通过检查发现其内脏已被烧坏无法医治，因伤势过重死亡。 </p>
+<p></p>
+  </div>
+  <div class="rowpeijue">
+    <div class="picpeijue"><img src="images/peijue2.jpg" width="200" height="200" alt=""/></div>
+    <p>中文名：萨博</p>
+    <p>日文名：サボ </p>
+    <p>简介：奇·D·路飞的义兄、波特卡斯·D·艾斯的兄弟。革命军参谋总长，同时也是革命军的二把手。战斗力极其强悍，尤其精擅体术，年轻一代中有着最顶尖的实力。出身贵族但向往自由，幼时与路飞、艾斯相识并结拜为兄弟。在德雷斯罗萨竞技场与路飞重逢，代替路飞出场并赢得比赛，吃下烧烧果实，继承了兄弟艾斯的意志。 </p>
+<p></p>
+  </div>
+  <div class="rowpeijue">
+    <div class="picpeijue"><img src="images/peijue3.jpg" width="200" height="200" alt=""/></div>
+    <p>中文名：波雅·汉库克</p>
+    <p>日文名：ボアハンコック </p>
+    <p>简介：王下七武海中唯一的女性，是生活在亚马逊·百合的战斗民族九蛇的最高领导人和九蛇海贼团的船长，同时也被认为是世界第一的绝世美女。拥有着数百万人之中只有一人才有的&ldquo;霸王色霸气&rdquo;，高傲、自恋，喜欢说&ldquo;无论妾身做了什么都会被原谅，因为妾身实在是太美了！。</p>
+    <p></p>
+  </div>
+  <div class="rowpeijue">
+    <div class="picpeijue"><img src="images/peijue4.jpg" width="200" height="200" alt=""/></div>
+    <p>中文名：白星</p>
+    <p>日文名：しらほし</p>
+    <p>简介：鱼人岛的龙宫王国公主，外表柔弱，内心诚挚纯真又坚强，是数百年才会出现一次的能跟海王类沟通的人鱼公主，海王类的王海王，拥有能挽救无数生命或者毁灭全世界的巨大力量，是《海贼王》里三大&ldquo;古代兵器&rdquo;之一的&ldquo;海王&rdquo;&ldquo;波塞冬&rdquo;。</p>
+    <p></p>
+  </div>
+  <embed src="music/RADWIMPS-三葉のテーマ (三叶的主题音乐)的副本.mp3" width="32" height="32"></embed>
+  
+  <div>  </div>
+</nav>
+
+<!-- InstanceEndEditable -->
+<footer>
+  <p>版权归属：海贼王</p>
+  <p>网站制作者：钱敬华</p>
+  <p>学号：20160310828</p>
+  <p>&nbsp;</p>
+</footer>
+<p>></p>
+<p>&nbsp;</p>
+</body>
+<!-- InstanceEnd --></html>
